@@ -1,0 +1,29 @@
+{
+  "name": "ast-please",
+  "version": "0.0.0",
+  "description": "ast viewer",
+  "main": "index.js",
+  "scripts": {
+    "start": "start.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chevett/ast-viewer.git"
+  },
+  "author": "mike chevett",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chevett/ast-viewer/issues"
+  },
+  "homepage": "https://github.com/chevett/ast-viewer",
+  "dependencies": {
+    "esprima": "~1.0.4",
+    "vashify": "~0.2.0",
+    "sassify2": "0.0.2",
+    "d3": "~3.4.0",
+    "browserify": "~3.19.1",
+    "vash": "~0.7.6-3",
+    "concat-stream": "~1.4.1"
+  }
+}

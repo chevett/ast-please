@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>@model.name</title>
+	</head>
+	<body>
+		<script>
+			var model = @html.raw(model.ast);
+			@html.raw(model.bundle)
+		</script>
+	</body>
+</html>
