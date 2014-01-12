@@ -8,9 +8,10 @@ var vash = require('vash'),
 
 var fileContents = fs.readFileSync('./example/1.js');
 
+b.add(__dirname + '/browser/main.js');
 b.bundle().pipe(concatStream(function(bundle){
 	var model = {
-		ast: esprima.parse(fileContents),
+		ast: JSON.stringify(esprima.parse(fileContents)),
 		bundle: bundle
 	};
 
