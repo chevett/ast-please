@@ -6,7 +6,7 @@ var vash = require('vash'),
 	b = browserify(),
 	pageTemplate = vash.compile(fs.readFileSync('./page.vash').toString());
 
-var fileContents = fs.readFileSync('./example/1.js');
+var fileContents = fs.readFileSync(process.argv[2]);
 
 b.add(__dirname + '/browser/main.js');
 b.bundle().pipe(concatStream(function(bundle){
