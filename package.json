@@ -19,12 +19,13 @@
   "homepage": "https://github.com/chevett/ast-viewer",
   "dependencies": {
     "esprima": "~1.0.4",
-    "vashify": "~0.2.0",
+    "vashify": ">=0.2.1",
     "sassify2": "0.0.2",
-    "d3": "~3.4.0",
     "browserify": "~3.19.1",
     "vash": "~0.7.6-3",
     "concat-stream": "~1.4.1",
-    "escodegen": "~1.0.1"
+    "escodegen": "~1.0.1",
+    "merle": "~0.1.5",
+    "jquery-browserify": "~1.8.1"
   }
 }

@@ -1,0 +1,7 @@
+<div id="start">
+@model.body.forEach(function(n){
+	<div>
+		@html.raw(html.go(n))
+	</div>
+})
+</div>

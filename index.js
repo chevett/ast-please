@@ -8,6 +8,7 @@ var vash = require('vash'),
 
 function getScriptBundle(cb){
 	var b = browserify();
+	b.transform('vashify');
 	b.add(__dirname + '/browser/main.js');
 	b.bundle().pipe(concatStream(function(bundle){
 		cb(bundle);

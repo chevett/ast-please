@@ -1,25 +1,23 @@
-var d3 = require('d3');
+var $ = require('jquery-browserify');
+var vash = require('vash-runtime');
+var templates = {
+	VariableDeclaration: require('../ast-templates/VariableDeclaration.vash'),
+	ExpressionStatement: require('../ast-templates/ExpressionStatement.vash'),
+	CallExpression: require('../ast-templates/CallExpression.vash')
+};
+
 var ast = global.model;
 
+vash.helpers.go = function(o){
+	if (!o || !o.type) return;
+	var tmpl = templates[o.type];
 
-d3.select('body')
-	.transition()
-	.duration(750)
-	.style('background-color', 'black');
-d3.select('body')
-	.data(ast.body)
-	.enter()
-	.append('div')
-	.transition()
-	.duration(750)
-	.delay(function(d, i) { return i * 200; })
-	.style('color', function(d){
-		switch (d.type){
-			case 'VariableDeclaration':
-				return 'cyan';
+	if (!tmpl) return ;
+	return tmpl(o);
 
-			default:
-				return 'white';
-		}
-	})
-.text(function(d){return d.type ; });
+};
+
+console.log(ast);
+var tmpl = require('./start.vash');
+$('body').append(tmpl(ast));
+

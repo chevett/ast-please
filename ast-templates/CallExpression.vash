@@ -1,0 +1,6 @@
+
+<span>
+	@if (model.callee.type === 'Identifier'){
+		<span>@model.callee.code</span>
+	}
+</span>
