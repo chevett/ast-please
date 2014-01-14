@@ -1,4 +1,4 @@
-<div>
+<span class="VariableDeclaration">
 	@if (model.kind === 'var'){
 		<span class="var">var</span>
 	}
@@ -6,4 +6,4 @@
 	@model.declarations.forEach(function(d){
 		<span>@d.id.name</span><span> = </span> @html.raw(html.go(d.init))
 	})
-</div>
+</span>

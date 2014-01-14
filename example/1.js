@@ -1,4 +1,4 @@
-var _ = require('lodash-node');
+var _ = require('lodash-node', 'shit');
 var arr = [
 	{name:'mike'},
 	{name:'fulie'},

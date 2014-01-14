@@ -1,6 +1,16 @@
 
-<span>
+<span class="CallExpression">
 	@if (model.callee.type === 'Identifier'){
-		<span>@model.callee.code</span>
+		<span>@model.callee.code</span><span></span>
 	}
+
+	@{ var needComma = false; }
+	(@model.arguments.forEach(function(f){
+		if (needComma){
+			html.raw(',');
+			needComma = true;
+		}
+
+		<span>@html.raw(html.go(f))</span>
+	}))
 </span>

@@ -3,7 +3,8 @@ var vash = require('vash-runtime');
 var templates = {
 	VariableDeclaration: require('../ast-templates/VariableDeclaration.vash'),
 	ExpressionStatement: require('../ast-templates/ExpressionStatement.vash'),
-	CallExpression: require('../ast-templates/CallExpression.vash')
+	CallExpression: require('../ast-templates/CallExpression.vash'),
+	Literal: require('../ast-templates/Literal.vash')
 };
 
 var ast = global.model;
