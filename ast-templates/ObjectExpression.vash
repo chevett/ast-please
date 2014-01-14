@@ -1,0 +1,10 @@
+{
+<span class="ObjectExpression">
+	@model.properties.forEach(function(p){
+		if (model.key === 'Literal'){
+			
+		}
+		@html.raw(html.go(p))
+	})
+</span>
+}

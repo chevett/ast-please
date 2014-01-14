@@ -4,7 +4,11 @@ var templates = {
 	VariableDeclaration: require('../ast-templates/VariableDeclaration.vash'),
 	ExpressionStatement: require('../ast-templates/ExpressionStatement.vash'),
 	CallExpression: require('../ast-templates/CallExpression.vash'),
-	Literal: require('../ast-templates/Literal.vash')
+	Literal: require('../ast-templates/Literal.vash'),
+	ArrayExpression: require('../ast-templates/ArrayExpression.vash'),
+	ObjectExpression: require('../ast-templates/ObjectExpression.vash'),
+	Identifier: require('../ast-templates/Identifier.vash')
+
 };
 
 var ast = global.model;

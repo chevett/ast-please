@@ -1,5 +1,14 @@
 <span class="VariableDeclaration">
-	@if (model.kind === 'var'){
+	@switch(model.kind){
+		case 'let':
+		<span class="let">let</span>
+		break;
+
+		case 'const':
+		<span class="const">const</span>
+		break;
+
+		default:
 		<span class="var">var</span>
 	}
 

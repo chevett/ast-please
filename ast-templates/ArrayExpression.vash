@@ -1,0 +1,7 @@
+[
+<span class="ArrayExpression">
+	@model.elements.forEach(function(d){
+		<span>@html.raw(html.go(d))</span>
+	})
+</span>
+]
